@@ -21,6 +21,7 @@ body {
   top: 0;
   left: -110vw;
   transition: all 500ms ease-in-out;
+  z-index: 999;
 }
 
 #detectionDiv.active {
@@ -28,23 +29,19 @@ body {
   left: 0;
 }
 
-#app {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 500ms ease-in-out;
-}
-
-#app.active {
-
-}
-
 #detectionDiv #detection-canvas {
   position: relative;
   float: left;
   clear: both;
   border-radius: 0 0 0.5em 0;
-  border-bottom: 3px solid #FFF;
+  border-bottom: 4px solid #FFF;
+}
+
+#detectionDiv #detection-canvas-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 0.5em 0;
 }
 
 #detectionDiv #parametersMenu {
@@ -55,7 +52,7 @@ body {
   padding: 1em 1.5em 1em 1.5em;
   background: black;
   border-radius: 0 0.5em 0.5em 0;
-  border-bottom: 3px solid #FFF;
+  border-bottom: 4px solid #FFF;
 }
 
 #detectionDiv #parametersMenu .parameterItem {
@@ -93,4 +90,23 @@ body {
 
 #toggleScreen:hover, #toggleScreen:active {
   padding: 6px 0 0 0;
+}
+
+
+
+/* styles for #app */
+
+#app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#app #app-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
 }
