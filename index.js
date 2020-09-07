@@ -1,12 +1,14 @@
-// code written in here will be executed once when the page loads
+// declare global variables up here
+
 function setup() {
+  // code written in here will be executed once when the page loads
   setupAppCanvas();
-  
 }
 
-// code written in here will be executed every frame
+
 function update() {
-  
+  // code written in here will be executed every frame
+  console.log(getMarkerPair(0, 3).angleBetween);
 }
 
 // setupAppCanvas() function will initialize #app-canvas.
